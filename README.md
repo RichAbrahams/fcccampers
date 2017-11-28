@@ -1,5 +1,5 @@
-FreeCodeCamp Wikipedia search project.
+FreeCodeCamp Twitch Api project.
 
 Built with Create-React-App, Material UI, redux & redux-saga.
 
-App deployed to https://fccwikisearch.herokuapp.com/
+App deployed to https://fcctwitchsearch.herokuapp.com/
