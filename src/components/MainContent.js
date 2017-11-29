@@ -6,13 +6,13 @@ import Loading from './Loading';
 
 const MainContent = (props) => (
   <MainWrapper className="main-content">
-    {props.onlineStreamers.length || props.offlineStreamers.length ? <DataTabs {...props} /> : <Loading />}
+    {props.data.length || props.error ? <DataTabs {...props} /> : <Loading />}
   </MainWrapper>
 );
 
 MainContent.propTypes = {
-  onlineStreamers: PropTypes.array,
-  offlineStreamers: PropTypes.array,
+  data: PropTypes.array,
+  error: PropTypes.bool,
 };
 
 export default MainContent;

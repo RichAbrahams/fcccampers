@@ -1,33 +1,26 @@
 import {
-  TWITCH_DATA_RESULTS, TWITCH_DATA_ERROR, UPDATE_FILTER,
+  DATA_RESULTS,
+  DATA_ERROR,
 } from '../constants';
 
 const initialState = {
-  streamData: [],
-  error: null,
-  filter: '',
+  data: [],
+  error: false,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case TWITCH_DATA_RESULTS: {
+    case DATA_ERROR: {
       return {
         ...state,
-        error: null,
-        streamData: action.payload,
+        error: true,
+        data: [],
       };
     }
-    case TWITCH_DATA_ERROR: {
+    case DATA_RESULTS: {
       return {
         ...state,
-        error: action.payload.error,
-        streamData: [],
-      };
-    }
-    case UPDATE_FILTER: {
-      return {
-        ...state,
-        filter: action.payload,
+        data: action.payload,
       };
     }
     default:

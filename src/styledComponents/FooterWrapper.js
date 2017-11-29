@@ -4,7 +4,7 @@ const Footer = styled.div`
 display: flex;
 justify-content: flex-end;
 align-items: center;
-background-color: #0D47A1;
+background-color: darkgreen;
 color: white;
 padding: 1em;
 height: 3em;

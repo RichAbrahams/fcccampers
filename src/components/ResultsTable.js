@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
-import {
-  Table,
-  TableBody,
-} from 'material-ui/Table';
-import Row from './Row';
+import 'react-table/react-table.css';
+import ReactTable from 'react-table';
 
 const ResultsTable = (props) => {
   const { data } = props;
 
+  const columns = [{
+    Header: 'User',
+    accessor: 'username', // String-based value accessors!
+  }, {
+    Header: 'All Time',
+    accessor: 'alltime',
+  }, {
+    Header: 'Thirty Days',
+    accessor: 'recent',
+  }];
+
   return (
-    <Table
-      selectable={false}
-    >
-      <TableBody>
-        { data.map((stream) => <Row stream={stream} key={shortid.generate()} />)}
-      </TableBody>
-    </Table>
+    <ReactTable
+      data={data}
+      columns={columns}
+    />
   );
 };
 

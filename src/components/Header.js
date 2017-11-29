@@ -4,7 +4,7 @@ import HeaderWrapper from '../styledComponents/HeaderWrapper';
 const Header = () => (
   <HeaderWrapper>
     <h3>
-      Twitch Api
+      Camper Leaderboard
     </h3>
   </HeaderWrapper>
 );

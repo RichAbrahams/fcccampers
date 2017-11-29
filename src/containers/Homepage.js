@@ -11,7 +11,7 @@ import Container from '../styledComponents/Container';
 
 export class Home extends Component {
   componentWillMount() {
-    this.props.getTwitchData();
+    this.props.getData();
   }
 
   render() {
@@ -26,21 +26,18 @@ export class Home extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  filter: selectors.selectFilter(),
-  onlineStreamers: selectors.selectOnlineStreamers(),
-  offlineStreamers: selectors.selectOfflineStreamers(),
   error: selectors.selectError(),
+  data: selectors.selectData(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    getTwitchData: () => dispatch(actions.getTwitchData()),
-    updateFilter: (payload) => dispatch(actions.updateFilter(payload)),
+    getData: () => dispatch(actions.getData()),
   };
 }
 
 Home.propTypes = {
-  getTwitchData: PropTypes.func,
+  getData: PropTypes.func,
 };
 
 

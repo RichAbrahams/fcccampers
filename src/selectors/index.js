@@ -2,19 +2,9 @@ import { createSelector } from 'reselect';
 
 const selectDataDomain = (state) => state.data;
 
-const selectFilter = () => createSelector(
+const selectData = () => createSelector(
   selectDataDomain,
-  (substate) => substate.filter
-);
-
-const selectOnlineStreamers = () => createSelector(
-  selectDataDomain,
-  (substate) => substate.streamData.filter((user) => user.online)
-);
-
-const selectOfflineStreamers = () => createSelector(
-  selectDataDomain,
-  (substate) => substate.streamData.filter((user) => !user.online)
+  (substate) => substate.data
 );
 
 const selectError = () => createSelector(
@@ -23,8 +13,6 @@ const selectError = () => createSelector(
 );
 
 export {
-  selectFilter,
-  selectOnlineStreamers,
-  selectOfflineStreamers,
+  selectData,
   selectError,
 };

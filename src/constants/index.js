@@ -1,4 +1,4 @@
-export const GET_TWITCH_DATA = 'GET_TWITCH_DATA';
-export const TWITCH_DATA_RESULTS = 'TWITCH_DATA_RESULTS';
-export const TWITCH_DATA_ERROR = 'TWITCH_DATA_ERROR';
-export const UPDATE_FILTER = 'UPDATE_FILTER';
+
+export const DATA_ERROR = 'DATA_ERROR';
+export const GET_DATA = 'GET_DATA';
+export const DATA_RESULTS = 'DATA_RESULTS';

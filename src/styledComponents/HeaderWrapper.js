@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const stc = styled.div`
-  background: #0D47A1;
+  background: darkgreen;
   color: white;
   font-family: 'Roboto Slab', serif;
   font-size: 28px;
